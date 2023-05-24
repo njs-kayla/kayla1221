@@ -200,14 +200,14 @@
         }
         
         .wrap-banner .prev{
-            left:550px;
+            left:-18px;
             position: absolute;
             top: 50%;
         }
         .wrap-banner .next{
             position: absolute;
             top: 50%;
-            right:550px;
+            right:-18px;
         }
         .wrap-banner .prev:hover,
         .wrap-banner .next:hover{
