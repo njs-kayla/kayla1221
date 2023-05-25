@@ -1,6 +1,7 @@
 body{
     background-color: #f5f5f5;
     font-family: sans-serif,Arial;
+    scroll-behavior: smooth;
 
 }
 main{
@@ -19,14 +20,17 @@ header .main-nav{
     justify-content: center;
     align-items: center;
 }
-header .logo{
+.logo-area{
+    background-color: #DDBC8B;
+}
+.logo-area .logo{
     width:120px;
     height: 75px;
     overflow: hidden;
     display: inline-block;
     margin-left: 46%;
 }
-header img{
+.logo-area .logo img{
     width: 120px;
     object-fit: cover;
     object-position: center -8px;
@@ -84,7 +88,7 @@ header .header-navlist{
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 50px;
     position: relative;
     z-index: 1;
 }
@@ -111,7 +115,7 @@ header .header-navlist{
     line-height: 16px;
     border-radius: 10px;
     text-align: center;
-    background-color: #DDBC8B;
+    background-color: #FFC38D;
     color: #fff;
 }
 .pet-information hgroup #share:hover::after{
@@ -126,48 +130,104 @@ header .header-navlist{
     padding: 5px;
     border-radius: 10px;
     text-align: center;
-    background-color: #DDBC8B;
+    background-color: #FFC38D;
     color: #fff;
 }
-.pet-information hgroup::before{
-    content: "-------------------------------";
+/* -----photo-slider----- */
+.pets-photo-slider{
+    margin: 30px;
+    width: 450px;
+    height: 450px;
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 8px 1px #969696;
+}
+.pets-photo-slider .pic{
     position: absolute;
-    color: #6d6767;
-    top: 80%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: round 20s linear infinite;
 }
-.pets-photo .pic{
-    overflow: hidden;
+.pets-photo-slider .pic img{
+    width: 450px;
+    height: 450px;
 }
-.pets-photo img:hover{
-    cursor: pointer;
-    transform: scale(1.05);
+.pets-photo-slider .pic:nth-child(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
 }
 
-.pets-photo{
-    align-self: center;
-    display: grid;
-    grid-template-columns: 340px 240px ;
-    grid-template-rows: 300px 250px;
-    gap: 5px;
+.pets-photo-slider .pic:nth-child(2) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
 }
-.pets-photo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+
+.pets-photo-slider .pic:nth-child(3) {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+
+.pets-photo-slider .pic:nth-child(4) {
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s;
+}
+
+.pets-photo-slider .pic:nth-child(5) {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+@-webkit-keyframes round {
+    5% {
+        opacity: 0;
+        /* 0 - 1秒 淡入*/
+    }
+    20%{
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    5% {
+        opacity: 0;
+        /* 0 - 1秒 淡入*/
+    }
+    20%{
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+        /* 5-6秒淡出*/
+    }
+}
+.pets-photo-slider:hover{
+    animation: paused;
+}
+.pets-photo-slider .pic-total{
+    position: absolute;
+    bottom: -90px;
+    gap: 15px;
+    display: flex;
+    left: 20px;
+}
+.pic-total img{
     display: block;
-    transform: scale(1);
-    transition: .5s;
+    width: 70px;
+    height: 70px;
 }
-.pets-photo img:nth-child(1){
-    grid-area: 1/1/2/2;
-    object-position: center 0px;
+.pic-total img:hover{
+    cursor: pointer;
+    scale: 1.05;
 }
+/* -----photo-slider----- */
 .text-description{
     margin-top: 70px;
     margin-right: 50px;
-    position: sticky;
-    top: 40px;
+    z-index: 2;
 }
 .text-description h1{
     font-size: 26px;
@@ -176,16 +236,19 @@ header .header-navlist{
     position: relative;
     z-index: 1;
 }
-.text-description i{
+.text-description .list-menu i{
     margin-right: 22px;
     font-size: large;
-    color: #DDBC8B;
+    color: #FFC38D;
 }
 
 hgroup{
     display: flex;
     position: relative;
     margin-bottom: 50px;
+}
+hgroup i{
+    color: #FFC38D;
 }
 .pet-information .circle{
     width: 40px;
@@ -208,14 +271,14 @@ hgroup{
 .list-menu .condition{
     line-height: 36px;
 } 
-.list span{
+.list-menu span{
     color: #6d6767;
+    margin-left: 5px;
 }
 .contact-person{
     margin: 30px 0 30px 0;
     display: flex;
     font-size: 0;
-    gap: 30px;
     align-items: center;
 }
 .contact-person span{
@@ -231,12 +294,12 @@ hgroup{
     background-color: #DDBC8B;
     border-radius: 10px;
     font-weight: bold;
-    width: 115px;
-    height: 40px;
     font-size: 16px;
     margin: 0 0 0 30px;
-    line-height: 40px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 8px;
 }
 .button-list .button:hover{
     cursor: pointer;
@@ -245,10 +308,18 @@ hgroup{
 }
 .contact-person i{
     color: #fff;
+    display: block;
     position: relative;
-    left: 14px;
+    left: 8px;
+    font-size: 16px;
+    margin-right: 14px;
+}
+.contact-person i:nth-child(1){
+    left: 5px;
+    font-size: 15px;
 }
 .back-story{
+    margin-top: 60px;
     font-size: 16px;
     font-weight: bold;
     width: 457px;
@@ -262,7 +333,7 @@ hgroup{
 /* -----other-adoption----- */
 .other-adoption{
     width: 100%;
-    margin: 120px 0 0px;
+    margin: 200px 0 0px;
     position: relative;
     z-index: 1;
 }

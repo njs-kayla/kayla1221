@@ -13,7 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="import" href="login.html" id="login"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
@@ -21,7 +24,8 @@
         <div class="header-area">
             <a href="index.html">
                 <div class="logo-full">
-                    <img src="full-logo.png" alt="PetsQ-logo">
+                    <img src="logo.png" alt="PetsQ-logo">
+                    <span>全台最大寵物資訊網站</span>
                 </div>
             </a>
         </div>
@@ -69,12 +73,12 @@
             <div class="slider">
                 <div class="item">
                     <a href="#">
-                        <div class="pic"><img src="螢幕擷取畫面 2023-05-09 134444.png"></div>
+                        <div class="pic"><img src="pic/首頁/banner-2.png"></div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#">
-                        <div class="pic"><img src="pic/首頁/michael-sum-LEpfefQf4rU-unsplash 1.png"></div>
+                        <div class="pic"><img src="pic/首頁/banner-center.png"></div>
                     </a>
                     <div class="tag-hot">
                         <span class="text">HOT</span>
@@ -95,7 +99,7 @@
                 </div>
                 <a href="#">
                     <div class="item">
-                        <div class="pic"><img src="螢幕擷取畫面 2023-05-09 132749.png"></div>
+                        <div class="pic"><img src="pic/首頁/banner-1.png"></div>
                     </div>
                 </a>
             </div>
@@ -212,16 +216,16 @@
                 <span>輕鬆分享和欣賞可愛的寵物照片</span>
                 <a href="#">View More</a>
             </div>
-            <div class="photo-area">
-                <div class="pic"><img src="pic/首頁/alec-favale-Ivzo69e18nk-unsplash.jpg"></div>
-                <div class="pic"><img src="pic/首頁/alvan-nee-73flblFUksY-unsplash.jpg"></div>
-                <div class="pic"><img src="pic/首頁/gavin-allanwood-hcxqLJjI99E-unsplash.jpg" alt=""></div>
-                <div class="pic"><img src="pic/首頁/bonnie-kittle-MUcxe_wDurE-unsplash.jpg" alt=""></div>
-                <div class="pic"><img src="pic/首頁/frenjamin-benklin-KIXHGKPswE0-unsplash.jpg"></div>
-                <div class="pic"><img src="pic/首頁/hang-niu-Tn8DLxwuDMA-unsplash.jpg" alt=""></div>
-                <div class="pic"><img src="pic/首頁/kim-green-D_pXn7cueOs-unsplash.jpg"></div>
-                <div class="pic"><img src="pic/首頁/jamie-street-s9Tf1eBDFqw-unsplash.jpg" alt=""></div>
-                <div class="pic"><img src="pic/首頁/ricky-kharawala-adK3Vu70DEQ-unsplash.jpg"></div>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="pic/首頁/alec-favale-Ivzo69e18nk-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/alvan-nee-73flblFUksY-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/gavin-allanwood-hcxqLJjI99E-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/bonnie-kittle-MUcxe_wDurE-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/frenjamin-benklin-KIXHGKPswE0-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/hang-niu-Tn8DLxwuDMA-unsplash.jpg" ></div>
+                <div class="item"><img src="pic/首頁/kim-green-D_pXn7cueOs-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/jamie-street-s9Tf1eBDFqw-unsplash.jpg"></div>
+                <div class="item"><img src="pic/首頁/ricky-kharawala-adK3Vu70DEQ-unsplash.jpg"></div>
         
             </div>
         </section>
@@ -246,7 +250,23 @@
         </div>
         <p>Copyright  All rights reserved.本網站為緯育TibaMe學員專題作品，本平台僅供學習、展示之用。 若有侵權疑慮，您可私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理。</p>
     </footer>
-
-
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:5,
+            nav:true,
+            autoplay:true,
+            pullDrag:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                768:{
+                    items:3
+                },
+            }
+        })
+    </script>
+    
 </body>
 </html>
