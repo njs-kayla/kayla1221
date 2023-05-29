@@ -337,14 +337,6 @@ hgroup i{
     position: relative;
     z-index: 1;
 }
-.background-area{
-    width: 100%;
-    height: 250px;
-    background-color: #DDBC8B;
-    opacity: 0.6;
-    position: absolute;
-    top: 100px;
-}
 .other-adoption h2{
     font-size: 18px;
     font-weight: bold;
@@ -408,6 +400,7 @@ hgroup i{
     line-height: 100px;
     padding-top:30px;
     font-weight: bold;
+
 }
 .back a{
     text-decoration: none;
