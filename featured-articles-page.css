@@ -17,8 +17,9 @@ header .logo{
     width:120px;
     height: 75px;
     overflow: hidden;
-    display: inline-block;
-    margin-left: 46%;
+    display: block;
+    margin: auto;
+    padding: 10px 0;
 }
 header img{
     width: 120px;

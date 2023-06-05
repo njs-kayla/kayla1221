@@ -1,12 +1,11 @@
         /* -----共同設定----- */
-        /* @keyframes shaking {
-            0%{transform: rotate(0deg);}
-            50%{transform: rotate(8deg);}
-            100%{transform: rotate(-8deg);}
+        body{
+            background-color: #F5F5F5;
         }
-        .information a:hover{
-            animation: shaking 1s 1 forwards;
-        } */
+        .content{
+            width:100%;
+            margin: auto;
+        }
         .information img{
             position: absolute;
             width: 100px;
@@ -366,8 +365,8 @@
         }
         .collections .information{
             position: relative;
-            margin:0 0 30px 220px;
-            padding-top:100px;
+            margin:0 auto 30px;
+            padding:100px 500px 0 0;
             width: 300px;
         }
         .collections h1{
@@ -394,8 +393,8 @@
             width: 100%;
             background-color: #F5F5F5;
             padding: 100px 0 210px;
-            overflow: hidden;
             position: relative;
+            overflow: hidden;
         }
         .popular-column .card-list{
             display: flex;
@@ -415,7 +414,7 @@
             border-radius: 50%;
             background-color: #EDE3DA;
             position: relative;
-            overflow: hidden;
+            
             z-index: 0;
         }
         .popular-column .introduce p{
@@ -454,10 +453,12 @@
             margin: 0 0 0 -8px;
             position: relative;
             z-index: 1;
+            width: fit-content;
         }
         .popular-column .information{
             position: relative;
-            margin: 0 0 30px 220px;
+            margin:0 auto 30px;
+            padding-right:300px ;
             width: 500px;
         }
         .popular-column .information .circle{
@@ -478,7 +479,7 @@
             top: -30px;
         }
         .popular-column .information a{
-            top:-8px;
+            top: -8px;
         }
         .popular-column .introduce .enter{
             position: absolute;
@@ -545,8 +546,8 @@
         }
         .adoption .information{
             position: relative;
-            margin: 0 0 30px 220px;
-            padding-top:100px;
+            margin:0 auto 40px;
+            padding:100px 300px 0 0;
             width: 500px;
         }
         .adoption h1{
@@ -576,14 +577,14 @@
             width: 100%;
             background-color: #F5F5F5;
             padding-bottom: 80px;
-            overflow: hidden;
             position: relative;
             z-index: 1;
+            overflow: hidden;
         }
         .photo-album .information{
             position: relative;
-            margin: 0 0 50px 220px;
-            padding-top:100px;
+            margin:0 auto 30px;
+            padding:100px 300px 0 0;
             width: 500px;
         }
         .photo-album h1{

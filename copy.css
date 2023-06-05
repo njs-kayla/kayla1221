@@ -1,0 +1,523 @@
+body{
+    background-color: #f5f5f5;
+    font-family: sans-serif,Arial;
+    scroll-behavior: smooth;
+
+}
+main{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    background-color: #DDBC8B;
+    position: relative;
+    z-index: 2;
+    position: sticky;
+    top: -80px;
+}
+header .main-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-area{
+    background-color: #DDBC8B;
+}
+.logo-area .logo{
+    width:120px;
+    height: 75px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 46%;
+}
+.logo-area .logo img{
+    width: 120px;
+    object-fit: cover;
+    object-position: center -8px;
+}
+.header-navlist .nav-item{
+    padding: 0 55px;
+    position: relative;
+    height: fit-content;
+}
+.nav-item + .nav-item{
+    border-left: 1px solid #fff ;
+}
+.header-navlist a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 0 0 8px;
+    transition: 0.3s;
+    font-family: sans-serif;
+}
+
+.header-navlist i{
+    color: #fff;
+    font-size: 22px;
+    transition: 0.3s;
+}
+.nav-item:hover i{
+    color: #ffffffa0;
+}
+.nav-item:hover a{
+    color: #ffffffa0;
+}
+.nav-item .deco-line{
+    width: 0%;
+    height: 2px;
+    background-color: #ffffffa0;
+    position: absolute;
+    bottom: -5px;
+    left: 50px;
+    transition: all .4s linear;
+}
+.nav-item:hover .deco-line{
+    width: 50%;
+}
+header .header-navlist{
+    padding: 20px 0;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+}
+/* ------normal-header----- */
+.adoption-information{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+.pet-information hgroup>i{
+    font-size: 24px;
+    position: relative;
+    margin-right: 30px;
+    transition: .5s;
+    cursor: pointer;
+    transform: scale(1);
+}
+.pet-information hgroup>i:hover{
+    transform: scale(1.08);
+}
+.pet-information hgroup #heart:hover::after{
+    content: "收藏";
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    position: absolute;
+    top: -45px;
+    right: 0;
+    padding:5px;
+    line-height: 16px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFC38D;
+    color: #fff;
+}
+.pet-information hgroup #share:hover::after{
+    content: "分享";
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    position: absolute;
+    top: -45px;
+    right: 0;
+    line-height: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFC38D;
+    color: #fff;
+}
+/* -----photo-slider----- */
+.pets-photo-slider{
+    margin: 30px;
+    width: 450px;
+    height: 450px;
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 8px 1px #969696;
+}
+.pets-photo-slider .pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: round 20s linear infinite;
+}
+.pets-photo-slider .pic img{
+    width: 450px;
+    height: 450px;
+}
+.pets-photo-slider .pic:nth-child(1) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+.pets-photo-slider .pic:nth-child(2) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+}
+
+.pets-photo-slider .pic:nth-child(3) {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+
+.pets-photo-slider .pic:nth-child(4) {
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s;
+}
+
+.pets-photo-slider .pic:nth-child(5) {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+@-webkit-keyframes round {
+    5% {
+        opacity: 0;
+        /* 0 - 1秒 淡入*/
+    }
+    20%{
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    5% {
+        opacity: 0;
+        /* 0 - 1秒 淡入*/
+    }
+    20%{
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+        /* 5-6秒淡出*/
+    }
+}
+.pets-photo-slider:hover{
+    animation: paused;
+}
+.pets-photo-slider .pic-total{
+    position: absolute;
+    bottom: -90px;
+    gap: 15px;
+    display: flex;
+    left: 20px;
+}
+.pic-total img{
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+.pic-total img:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+/* -----photo-slider----- */
+.text-description{
+    margin-top: 70px;
+    margin-right: 50px;
+    z-index: 2;
+}
+.text-description h1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: 90px;
+    position: relative;
+    z-index: 1;
+}
+.text-description .list-menu i{
+    margin-right: 22px;
+    font-size: large;
+    color: #FFC38D;
+}
+
+hgroup{
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+}
+hgroup i{
+    color: #FFC38D;
+}
+.pet-information .circle{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFC38D;
+    top: -25px;
+    left: -25px;
+}
+.list-menu{
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.list-menu .illustrate{
+    line-height: 28px;
+}
+.list-menu .condition{
+    line-height: 36px;
+} 
+.list-menu span{
+    color: #6d6767;
+    margin-left: 5px;
+}
+.contact-person{
+    margin: 30px 0 30px 0;
+    display: flex;
+    font-size: 0;
+    align-items: center;
+}
+.contact-person span{
+    font-size: 16px;
+    font-weight: bold;
+}
+.contact-person .button-list{
+    display: flex;
+    align-items: center;
+}
+.button-list .button{
+    color:#fff;
+    background-color: #DDBC8B;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+.button-list .button:hover{
+    cursor: pointer;
+    rotate: -5deg;
+    transition: .3s;
+}
+.contact-person i{
+    color: #fff;
+    display: block;
+    position: relative;
+    left: 8px;
+    font-size: 16px;
+    margin-right: 14px;
+}
+.contact-person i:nth-child(1){
+    left: 5px;
+    font-size: 15px;
+}
+.back-story{
+    margin-top: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 457px;
+}
+.back-story>p+p{
+    margin-top: 20px;
+}
+.back-story p{
+    line-height: 24px;
+}
+/* -----other-adoption----- */
+.other-adoption{
+    width: 100%;
+    margin: 200px 0 0px;
+    position: relative;
+    z-index: 1;
+}
+.other-adoption h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin:50px 0 0 100px;
+    position: relative;
+    z-index: 1;
+}
+.other-adoption-list{
+    display: flex;
+    position: relative;
+    margin-left: 300px;
+    gap: 35px;
+    bottom:65px;
+}
+.other-adoption-list .item{
+    position: relative;
+    transition: .5s;
+    transform: scale(1);
+}
+.other-adoption-list .item:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.other-adoption-list .item img{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 20px;
+}
+.other-adoption-list > .item:hover::after{
+    content: "View More";
+    color: #fff;
+    font-size: 20px;
+    line-height: 200px;
+    background-color: #4a4a4a50;
+    border-radius: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+}
+.other-adoption .circle{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFC38D;
+    top: 22px;
+    left: 80px;
+}
+/* -----other-adoption----- */
+.back{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 100px;
+    padding-top:30px;
+    font-weight: bold;
+
+}
+.back a{
+    text-decoration: none;
+    color: #000;
+}
+.back i{
+    position: relative;
+    transition: .5s;
+}
+.back span{
+    font-size: 18px;
+    position: relative;
+    transition: .5s;
+}
+.back:hover{
+    color: #DDBC8B;
+    cursor: pointer;
+}
+
+
+/* -----footer----- */
+footer{
+    width: 100%;
+    background-color: #DDBC8B;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+footer .logo img{
+    width: 180px;
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+}
+.footer-top .icon{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 45px 30px 0;
+    gap: 15px;
+}
+.footer-top .icon i{
+    font-size: 20px;
+}
+.footer-top .icon i:hover{
+    cursor: pointer;
+}
+.footer-top ul{
+    margin: 45px 50px 0;
+    color: #fff;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+.footer-top li{
+    margin-bottom: 7px;
+    width: fit-content;
+}
+.footer-top li:hover{
+    cursor: pointer;
+    color: #6d6767;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    padding: 0 0 8px;
+    font-size: 14px;
+}
+/* -----footer----- */
+.yellow-deco,
+.green-deco,
+.pink-deco{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    border-radius: 50%;
+    opacity: .3;
+    transform: rotate(-72deg);
+ }
+ .green-deco{
+    top: -100px;;
+    left: -100px;
+    background-color: #9BD2BE;
+    z-index: 0;
+ }
+ .yellow-deco{
+    background-color: #E3D982;
+    right: -150px;
+    top: 350px;
+ }
+ .top-button{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: #ffc28d6d;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 20px;
+    z-index: 2;
+    transition: .5s;
+}
+.top-button a{
+    text-decoration: none;
+    color: #ffffff9a;
+}
+.top-button i{
+    font-weight: bold;
+    position: absolute;
+    font-size: 24px;
+    top: 14px;
+    left: 16px;
+}
+.top-button:hover{
+    background-color: #FFC38D;
+    cursor: pointer;
+}
+.top-button:hover a{
+    color: #fff;
+}
+ 

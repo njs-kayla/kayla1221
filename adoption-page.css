@@ -1,8 +1,7 @@
 body{
-    background-color: #f5f5f5;
     font-family: sans-serif,Arial;
     scroll-behavior: smooth;
-
+    background-color:#f5f5f5 ;
 }
 main{
     overflow: hidden;
@@ -11,9 +10,9 @@ header{
     width: 100%;
     background-color: #DDBC8B;
     position: relative;
-    z-index: 2;
+    z-index: 10;
     position: sticky;
-    top: -80px;
+    top: -105px;
 }
 header .main-nav{
     display: flex;
@@ -22,13 +21,14 @@ header .main-nav{
 }
 .logo-area{
     background-color: #DDBC8B;
+    padding: 15px 0;
 }
 .logo-area .logo{
     width:120px;
     height: 75px;
     overflow: hidden;
-    display: inline-block;
-    margin-left: 46%;
+    display: block;
+    margin: auto;
 }
 .logo-area .logo img{
     width: 120px;
@@ -83,342 +83,293 @@ header .header-navlist{
     justify-content: center;
 }
 /* ------normal-header----- */
-.adoption-information{
-    margin-top: 40px;
+main{
     width: 100%;
+}
+.pets-photo{
+    width: 320px;
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    position: relative;
-    z-index: 1;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 10px;
 }
-.pet-information hgroup>i{
-    font-size: 24px;
-    position: relative;
-    margin-right: 30px;
-    transition: .5s;
+#large{
+    height: 300px;
+}
+.pets-photo img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.img-small{
+    display: flex;
+    gap: 16px;
+}
+.img-small img{
+    width: 96px;
+    height: 96px;
+    box-sizing: border-box;
+}
+.img-small img:hover{
     cursor: pointer;
-    transform: scale(1);
 }
-.pet-information hgroup>i:hover{
-    transform: scale(1.08);
+.content{
+    padding-top: 50px;
+    width: 1100px;
+    margin:30px auto 0;
 }
-.pet-information hgroup #heart:hover::after{
-    content: "收藏";
+.content .breadcrumb{
+    font-weight: bold;
+    margin-left: 30px;
+}
+.content .breadcrumb ul li{
+    display: inline-block;
+}
+.breadcrumb ul li a{
+    text-decoration: none;
+    color: #6d6767;
+}
+.breadcrumb ul li a:hover{
+    color: #DDBC8B;
+}
+.breadcrumb ul li+li::before{
+    content: "/";
+    color: #919191;
+    margin: 0 10px;
+}
+.adoption-information{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: start;
+    font-weight: bold;
+}
+hgroup h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+hgroup{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin:40px 0 30px 58px;
+    font-weight: bold;
+}
+hgroup span{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #6d6767;
+    line-height: 20px;
+}
+hgroup .icon i{
+    margin-left: 20px;
+    font-size: 20px;
+    color: #DDBC8B;
+    position: relative;
+}
+hgroup .icon i:hover{
+    cursor: pointer;
+}
+hgroup .icon i:hover::after{
+    content: '收藏';
     font-family: sans-serif;
     font-weight: bold;
     font-size: 10px;
     position: absolute;
-    top: -45px;
-    right: 0;
-    padding:5px;
-    line-height: 16px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #FFC38D;
-    color: #fff;
-}
-.pet-information hgroup #share:hover::after{
-    content: "分享";
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 10px;
-    position: absolute;
-    top: -45px;
-    right: 0;
-    line-height: 16px;
+    top:-40px;
+    left: -1px;
     padding: 5px;
     border-radius: 10px;
     text-align: center;
-    background-color: #FFC38D;
     color: #fff;
-}
-/* -----photo-slider----- */
-.pets-photo-slider{
-    margin: 30px;
-    width: 450px;
-    height: 450px;
-    position: sticky;
-    top: 0;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 8px 1px #969696;
-}
-.pets-photo-slider .pic{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    animation: round 20s linear infinite;
-}
-.pets-photo-slider .pic img{
-    width: 450px;
-    height: 450px;
-}
-.pets-photo-slider .pic:nth-child(1) {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-}
-
-.pets-photo-slider .pic:nth-child(2) {
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
-}
-
-.pets-photo-slider .pic:nth-child(3) {
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
-}
-
-.pets-photo-slider .pic:nth-child(4) {
-    -webkit-animation-delay: 12s;
-            animation-delay: 12s;
-}
-
-.pets-photo-slider .pic:nth-child(5) {
-    -webkit-animation-delay: 16s;
-            animation-delay: 16s;
-}
-@-webkit-keyframes round {
-    5% {
-        opacity: 0;
-        /* 0 - 1秒 淡入*/
-    }
-    20%{
-        opacity: 1;
-    }
-    35% {
-        opacity: 0;
-        /* 5-6秒淡出*/
-    }
-}
-@keyframes round {
-    5% {
-        opacity: 0;
-        /* 0 - 1秒 淡入*/
-    }
-    20%{
-        opacity: 1;
-    }
-    35% {
-        opacity: 0;
-        /* 5-6秒淡出*/
-    }
-}
-.pets-photo-slider:hover{
-    animation: paused;
-}
-.pets-photo-slider .pic-total{
-    position: absolute;
-    bottom: -90px;
-    gap: 15px;
-    display: flex;
-    left: 20px;
-}
-.pic-total img{
-    display: block;
-    width: 70px;
-    height: 70px;
-}
-.pic-total img:hover{
-    cursor: pointer;
-    scale: 1.05;
-}
-/* -----photo-slider----- */
-.text-description{
-    margin-top: 70px;
-    margin-right: 50px;
-    z-index: 2;
-}
-.text-description h1{
-    font-size: 26px;
-    font-weight: bold;
-    margin-right: 90px;
-    position: relative;
+    background-color: #DDBC8B;
     z-index: 1;
 }
-.text-description .list-menu i{
-    margin-right: 22px;
-    font-size: large;
-    color: #FFC38D;
+hgroup .icon i:nth-child(2):hover::after{
+    content: '分享';
 }
-
-hgroup{
-    display: flex;
-    position: relative;
-    margin-bottom: 50px;
+.text-description{
+    align-self: center;
 }
-hgroup i{
-    color: #FFC38D;
+.adoption-tag{
+    margin:0 0 20px 30px;
 }
-.pet-information .circle{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #FFC38D;
-    top: -25px;
-    left: -25px;
+.text-description .adoption-tag .date{
+    display: inline-block;
+    margin-left: 20px;
+}
+.text-description .adoption-tag span{
+    background-color: #dd8b8b;
+    padding: 5px;
+    font-size: 14px;
+    width: fit-content;
+    border-radius: 10px;
+    color: #fff;
 }
 .list-menu{
-    display: flex;
-    gap: 50px;
-    font-weight: bold;
-    box-sizing: border-box;
+    line-height: 26px;
+    margin: auto 0;
 }
-.list-menu .illustrate{
-    line-height: 28px;
+.list-menu .illustrate li i{
+    font-size: 5px;
+    margin-right: 10px;
+    color: #dd8b8b;
 }
 .list-menu .condition{
-    line-height: 36px;
-} 
-.list-menu span{
-    color: #6d6767;
-    margin-left: 5px;
+    margin-top: 16px;
+}
+.list-menu .condition i{
+    margin-right: 12px;
+    color: #DDBC8B;
+}
+.list-menu .condition li a{
+    text-decoration: none;
+    color: #878787;
+    position: relative;
+}
+.list-menu .condition li a:hover::after{
+    content: '下載參考';
+    font-family: sans-serif;
+    font-size: 10px;
+    position: absolute;
+    top:-10px;
+    right:-65px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #DDBC8B;
+    z-index: 1;
 }
 .contact-person{
-    margin: 30px 0 30px 0;
+    width: 295px;
     display: flex;
-    font-size: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 30px;
     align-items: center;
 }
-.contact-person span{
-    font-size: 16px;
-    font-weight: bold;
+.contact-person img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.contact-person a{
+    text-decoration: none;
+    color: #818181;
+    display: inline-block;
+    margin-left: 5px;
+}
+.contact-person a:hover{
+    color: #DDBC8B;
 }
 .contact-person .button-list{
     display: flex;
-    align-items: center;
+    gap: 8px;
 }
-.button-list .button{
-    color:#fff;
+.contact-person .button-list .button{
+    padding: 8px;
     background-color: #DDBC8B;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0 0 0 30px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    transition: .5s;
+    
 }
-.button-list .button:hover{
+.contact-person .button-list .button:hover{
     cursor: pointer;
     rotate: -5deg;
-    transition: .3s;
 }
-.contact-person i{
-    color: #fff;
-    display: block;
-    position: relative;
-    left: 8px;
-    font-size: 16px;
-    margin-right: 14px;
-}
-.contact-person i:nth-child(1){
-    left: 5px;
-    font-size: 15px;
+.contact-person .button-list .button i{
+    margin-right: 5px;
 }
 .back-story{
-    margin-top: 60px;
-    font-size: 16px;
-    font-weight: bold;
-    width: 457px;
-}
-.back-story>p+p{
-    margin-top: 20px;
-}
-.back-story p{
+    width: 460px;
+    margin:60px 100px 0 auto;
     line-height: 24px;
+    font-weight: bold;
 }
-/* -----other-adoption----- */
 .other-adoption{
-    width: 100%;
-    margin: 200px 0 0px;
-    position: relative;
-    z-index: 1;
+    width: 900px;
+    margin:80px auto 50px;
 }
 .other-adoption h2{
-    font-size: 18px;
     font-weight: bold;
-    margin:50px 0 0 100px;
-    position: relative;
-    z-index: 1;
+    font-size: 20px;
+}
+.other-adoption hgroup img{
+    position: absolute;
+    width: 150px;
+    top: -70px;
+    left: -120px;
+    z-index: 2;
 }
 .other-adoption-list{
     display: flex;
+    justify-content: space-between;
     position: relative;
-    margin-left: 300px;
-    gap: 35px;
-    bottom:65px;
-}
-.other-adoption-list .item{
-    position: relative;
-    transition: .5s;
-    transform: scale(1);
-}
-.other-adoption-list .item:hover{
-    cursor: pointer;
-    transform: scale(1.05);
+    z-index: 3;
+    overflow: hidden;
 }
 .other-adoption-list .item img{
     width: 250px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 20px;
+    height: 250px;
 }
-.other-adoption-list > .item:hover::after{
-    content: "View More";
-    color: #fff;
-    font-size: 20px;
-    line-height: 200px;
-    background-color: #4a4a4a50;
-    border-radius: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-weight: bold;
+.other-adoption hgroup{
+    position: relative;
+    z-index: 3;
+    left: 50px;
+    margin-bottom: 45px;
 }
-.other-adoption .circle{
-    width: 40px;
-    height: 40px;
+.other-adoption h2{
+    position: relative;
+    z-index: 4;
+}
+.circle{
+    width: 200px;
+    height: 100px;
+    rotate: -35deg;
     position: absolute;
     border-radius: 50%;
-    background-color: #FFC38D;
-    top: 22px;
-    left: 80px;
+    background-color: #fff;
+    top: -40px;
+    left: -110px;
+    z-index: 0;
 }
-/* -----other-adoption----- */
-.back{
-    text-align: center;
-    vertical-align: middle;
-    font-size: 20px;
-    line-height: 100px;
-    padding-top:30px;
+.other-adoption .text{
     font-weight: bold;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
+    background-color: #ddbc8b90;
+    position: absolute;
+    transform: translateY(250px);
+    color: #fff;
+    transition: .8s;
+}
+.other-adoption .item:hover .text{
+    transform: translateY(-250px);
+}
+.other-adoption .item:hover{
+    cursor: pointer;
+}
+.back{
+    width: fit-content;
+    margin: auto;
+    padding: 30px 0;
 
 }
 .back a{
     text-decoration: none;
     color: #000;
+    font-weight: bold;
 }
-.back i{
-    position: relative;
-    transition: .5s;
-}
-.back span{
-    font-size: 18px;
-    position: relative;
-    transition: .5s;
-}
-.back:hover{
+.back a:hover{
     color: #DDBC8B;
-    cursor: pointer;
 }
+
+
+
 
 
 /* -----footer----- */
@@ -470,28 +421,7 @@ footer p{
     font-size: 14px;
 }
 /* -----footer----- */
-.yellow-deco,
-.green-deco,
-.pink-deco{
-    position: absolute;
-    width: 500px;
-    height: 600px;
-    border-radius: 50%;
-    opacity: .3;
-    transform: rotate(-72deg);
- }
- .green-deco{
-    top: -100px;;
-    left: -100px;
-    background-color: #9BD2BE;
-    z-index: 0;
- }
- .yellow-deco{
-    background-color: #E3D982;
-    right: -150px;
-    top: 350px;
- }
- .top-button{
+.top-button{
     width: 50px;
     height: 50px;
     position: fixed;
@@ -520,4 +450,3 @@ footer p{
 .top-button:hover a{
     color: #fff;
 }
- 

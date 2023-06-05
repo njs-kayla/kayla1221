@@ -176,8 +176,11 @@
         display: inline-block;
         font-size: 22px;
     }
+    .user-card .share-icon i:hover{
+        color: #DDBC8B;
+    }
     .information .follow-button{
-        background-color: #FFC38D;
+        background-color: #DDBC8B;
         color: #fff;
         width: fit-content;
         box-sizing: border-box;
@@ -187,8 +190,12 @@
         letter-spacing: .1em;
         border-radius: 20px;
         position: relative;
-        top: 20px;
+        top: 25px;
         left: 82px;
+        transition: .5s;
+    }
+    .information .follow-button:hover{
+        rotate: -5deg;
     }
     .user-card .share-icon i:hover{
         cursor: pointer;
