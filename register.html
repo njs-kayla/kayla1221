@@ -15,12 +15,18 @@
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
-    <header>
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
         <div class="logo-area" id="top">
             <a href="index.html" class="logo">
                 <img src="logo.png" alt="PetsQ-logo">
             </a>
         </div>
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <nav class="main-nav">
             <div class="header-navlist">
                 <div class="nav-item">
@@ -40,7 +46,7 @@
                 </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-dog"></i>
-                    <a href="#">領養專區</a>
+                    <a href="adoption.html">領養專區</a>
                     <div class="deco-line"></div>
                 </div>
                 <div class="nav-item">
@@ -52,9 +58,6 @@
         </nav>
     </header>
     <div class="wrap">
-        <div class="background-image">
-            <img src="pic/login/bg.png" alt="background-image">
-        </div>
         <section class="content">
             <h1>會員註冊</h1>
             <ul>
@@ -90,7 +93,7 @@
                     <input type="date" id="birthday">
                 </li>
                 <li>
-                    <label for="county">請選擇縣市</label>
+                    <label for="county">縣市</label>
                     <select id="county">
                         <option value="">請選擇縣市</option>
                         <option value="基隆市">基隆市</option>
@@ -118,7 +121,7 @@
                     </select>
                 </li>
                 <li>
-                    <label for="check"><span>我已仔細閱讀並明瞭<a href="">網站條款</a>所載內容及其意義，茲同意該等<br>條款規定，並願遵守網站現今、嗣後規範的各種規則。</span></label>
+                    <label for="check" class="check"><span>我已仔細閱讀並明瞭<a href="">網站條款</a>所載內容及其意義，茲同意該等條款規定，並願遵守網站現今、嗣後規範的各種規則。</span></label>
                     <input type="checkbox" id="check">
                 </li>
             </ul>
