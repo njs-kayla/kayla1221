@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="bookmark" href="img/favicon.ico" />
+    <title>會員登入-PetsQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
+        <div class="logo-area" id="top">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="PetsQ-logo">
+            </a>
+        </div>
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="main-nav">
+            <div class="header-navlist">
+                <div class="nav-item">
+                    <i class="fa-solid fa-image"></i>
+                    <a href="#">毛孩相冊</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <a href="featured-articles.html">精選文章</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-comments"></i>
+                    <a href="#">寵物討論</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-dog"></i>
+                    <a href="#">領養專區</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="user-profile.html">我的主頁</a>
+                    <div class="deco-line"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap">
+        <section class="content">
+            <h1>會員登入</h1>
+            <ul>
+                <li>
+                    <label for="email">帳號</label>
+                    <input type="email" id="email" placeholder="請輸入Email">
+                    <i class="fa-solid fa-user"></i>
+                </li>
+                <li>
+                    <label for="password">密碼</label>
+                    <input type="password" id="password">
+                    <i class="fa-solid fa-lock"></i>
+                </li>
+            </ul>
+            <div class="submit">
+                <label for="login"></label>
+                <input type="submit" value="登入" id="login">
+            </div>
+            <div class="function">
+                <button><a href="register.html"><i class="fa-solid fa-user-plus"></i>會員註冊</a></button>
+                <button><i class="fa-solid fa-question"></i>忘記密碼</button>
+            </div>
+            <div class="other">
+                <button><i class="fa-brands fa-square-facebook"></i>使用Facebook登入</button>
+                <button><i class="fa-brands fa-google"></i>使用google登入</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <a href="index.html">
+                    <div class="logo"><img src="full-logo.png" alt="PetsQ-logo"></div>
+            </a>
+            <div class="icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <ul>
+                <li>服務信箱</li>
+                <li>授權服務</li>
+                <li>授權服務</li>
+                <li>使用說明</li>
+                <li>隱私權聲明與會員使用條款</li>
+            </ul>
+        </div>
+        <p>Copyright  All rights reserved.本網站為緯育TibaMe學員專題作品，本平台僅供學習、展示之用。 若有侵權疑慮，您可私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理。</p>
+    </footer>
+</body>
+</html>

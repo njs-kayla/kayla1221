@@ -13,16 +13,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700" rel="stylesheet">
     <link rel="stylesheet" href="adoption-page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-    
-    <header>
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
         <div class="logo-area" id="top">
             <a href="index.html" class="logo">
                 <img src="logo.png" alt="PetsQ-logo">
             </a>
         </div>
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <nav class="main-nav">
             <div class="header-navlist">
                 <div class="nav-item">
@@ -71,7 +75,7 @@
             </hgroup>
             <section class="adoption-information">
                 <div class="pets-photo">
-                    <img src="pic/adoption/IMG_5663 2.png" alt="待領養貓咪" id="large">
+                    <img src="pic/adoption/IMG_5663 2.png" alt="待領養貓咪" id="large" style="opacity: 1;">
                     <div class="img-small">
                         <img src="pic/adoption/IMG_5663 2.png" alt="待領養貓咪">
                         <img src="pic/adoption/11a9f2d2f03554387e7a4ad8738ec7c3 1.png" alt="待領養貓咪">
@@ -100,7 +104,7 @@
                     </div>
                 </section>
                 <div class="contact-person">
-                    <span>送養人&nbsp:&nbsp&nbsp<img src="pic/user-profile/amber-kipp-75715CVEJhI-unsplash.jpg" alt="送養人頭像">&nbsp<a href="user-profile.html">CLARE</a></span>
+                    <span>送養人&nbsp:&nbsp&nbsp<img src="pic/user-profile/amber-kipp-75715CVEJhI-unsplash.jpg" alt="送養人頭像">&nbsp&nbsp<a href="user-profile.html">CLARE</a></span>
                     <div class="button-list">
                         <div class="button"><i class="fa-solid fa-phone"></i>電話聯絡</div>
                         <div class="button"><i class="fa-brands fa-line"></i>LINE聯絡</div>
@@ -174,7 +178,12 @@
     </footer>
     <script>
         function showLarge(e){
-        document.getElementById("large").src = e.target.src;
+            var largeImage = document.getElementById("large");
+        largeImage.style.opacity = 0; // 先將 opacity 設定為 0，觸發淡出效果
+        setTimeout(function() {
+            largeImage.src = e.target.src;
+            largeImage.style.opacity = 1; // 切換圖片後將 opacity 設定為 1，觸發淡入效果
+        }, 300); // 設定延遲時間，單位為毫秒
         }
         function init(){
             let imgs = document.getElementsByClassName("img-small");

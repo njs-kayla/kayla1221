@@ -22,13 +22,6 @@ header .main-nav{
     justify-content: center;
     align-items: center;
 }
-header .logo{
-    width:120px;
-    height: 75px;
-    overflow: hidden;
-    display: inline-block;
-    margin-left: 46%;
-}
 header img{
     width: 120px;
     object-fit: cover;
