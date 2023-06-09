@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +15,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
+
 
 </head>
-<body>
-    <div class="main-header" id="top">
+<body id="top">
+    <div class="top-button">
+        <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+    <div class="top-header">
         <div class="header-area">
             <a href="index.html">
                 <div class="logo-full">
@@ -31,52 +35,84 @@
         </div>
         <div class="main-header-deco">
             <div class="main-header-decoration">
-                <div class="header-circle"></div>
-            </div>
+                <div class="header-circle">
+                </div>
+            </div>         
         </div>
     </div>
-    <header>
-        <div class="normal-header">
-            <nav class="main-nav">
-                <div class="header-navlist">
-                    <div class="nav-item">
-                        <i class="fa-solid fa-image"></i>
-                        <a href="#">毛孩相冊</a>
-                        <div class="deco-line"></div>
-                    </div>
-                    <div class="nav-item">
-                        <i class="fa-solid fa-newspaper"></i>
-                        <a href="featured-articles.html">精選文章</a>
-                        <div class="deco-line"></div>
-                    </div>
-                    <div class="nav-item">
-                        <i class="fa-solid fa-comments"></i>
-                        <a href="#">寵物討論</a>
-                        <div class="deco-line"></div>
-                    </div>
-                    <div class="nav-item">
-                        <i class="fa-solid fa-dog"></i>
-                        <a href="adoption.html">領養專區</a>
-                        <div class="deco-line"></div>
-                    </div>
-                    <div class="nav-item">
-                        <i class="fa-solid fa-circle-user"></i>
-                        <a href="user-profile.html">我的主頁</a>
-                        <div class="deco-line"></div>
-                    </div>
-                </div>
-            </nav>
+    <input type="checkbox" name="" id="menu-switch">
+
+    <header class="main-header">
+        <div class="logo-area" >
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="PetsQ-logo">
+            </a>
         </div>
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="login">
+        <nav class="main-nav">
+            <div class="header-navlist">
+                <div class="nav-item">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <label for="login"><span>我的主頁</span>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></label>
+                    
+                    <div class="deco-line"></div>
+                    <ul>
+                        <li><a href="user-profile.html">我的主頁</a></li>
+                        <li><a href="login.html">登入</a></li>
+                        <li><a href="register.html">註冊</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-image"></i>
+                    <a href="#">毛孩相冊</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <a href="featured-articles.html">精選文章</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-comments"></i>
+                    <a href="#">寵物討論</a>
+                    <div class="deco-line"></div>
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-dog"></i>
+                    <a href="#">領養專區</a>
+                    <div class="deco-line"></div>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="wrap-banner">
-            <div class="slider">
-                <div class="item">
+            <div class="nav-icon">
+                   
+                <button id="prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button id="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div id="slider">
+                <div class="slider-item">
                     <a href="#">
                         <div class="pic"><img src="pic/index/banner-2.png"></div>
                     </a>
                 </div>
-                <div class="item">
+                <a href="#">
+                    <div class="slider-item">
+                        <div class="pic"><img src="pic/index/banner-1.png"></div>
+                    </div>
+                </a>
+                <div class="slider-item">
                     <a href="#">
                         <div class="pic"><img src="pic/index/banner-center.png"></div>
                     </a>
@@ -88,22 +124,45 @@
                         <span class="text">自己跟回家的貓貓~</span>
                         <span class="triangle"></span>
                     </div>
-                    <div class="nav">
-                        <button class="prev">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        <button class="next">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
                 </div>
                 <a href="#">
-                    <div class="item">
-                        <div class="pic"><img src="pic/index/banner-1.png"></div>
+                    <div class="slider-item">
+                        <div class="pic"><img src="pic/index/banner4.png"></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slider-item">
+                        <div class="pic"><img src="pic/index/banner5.jpg"></div>
                     </div>
                 </a>
             </div>
-            
+        </div>
+        <div class="wrap-slider">
+            <div class="nav-icon">
+                <button id="prev-m">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button id="next-m">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div id="slider-2">
+                <div class="slider-item">
+                    <img src="pic/index/banner-1.png" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="pic/index/banner-2.png" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="pic/index/banner3.png" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="pic/index/banner4.png" alt="">
+                </div>
+                <div class="slider-item">
+                    <img src="pic/index/banner5.jpg" alt="">
+                </div>
+            </div>
         </div>
         <section class="content">
             <section class="collections">
@@ -142,9 +201,6 @@
                         <h2>【2022最新】台北市17座「狗狗公園」一次介紹，16班寵物專屬公車路線直接抵達</h2>
                     </div>
                 </div>
-                <div class="top-button">
-                    <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
-                </div>
             </section>
             <section class="popular-column">
                 <div class="deco-yellow"></div>
@@ -152,9 +208,9 @@
                     <div class="pic"><img src="pic/index/6.png"></div>
                     <div class="circle"></div>
                     <h1>熱門專欄</h1>
-                    <span>揭示寵物世界的驚奇，<br>
+                    <span>
                         分享有趣的故事、<br>
-                        可愛的影片和實用的養護知識</span>
+                        可愛的影片和<br>實用的養護知識</span>
                     <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
                     <div class="card-list">
@@ -258,7 +314,7 @@
     <script>
         $('.owl-carousel').owlCarousel({
             loop:true,
-            margin:10,
+            margin:5,
             nav:false,
             dots:false,
             autoplay:true,
@@ -275,6 +331,105 @@
             }
         })
     </script>
-    
+    <script>//桌機板banner
+       function $id(navIcon) {
+        return document.getElementById(navIcon);
+        }
+
+        function prevButtonClick() {
+        let itemView = $id("slider");
+        let items = document.getElementsByClassName("slider-item");
+
+        let first = items[0];
+        let last = items[items.length - 1];
+
+        itemView.insertBefore(last, first);
+        }
+
+
+
+        function nextButtonClick() {
+        let itemView = $id("slider");
+        let items = document.getElementsByClassName("slider-item");
+
+        let first = items[0];
+        itemView.appendChild(first);
+        }
+
+        window.addEventListener("load", function() {
+        let prevButton = $id("prev");
+        let nextButton = $id("next");
+
+        prevButton.addEventListener("click", prevButtonClick);
+        nextButton.addEventListener("click", nextButtonClick);
+        });
+
+    </script>
+    <script>//手機板banner
+        window.addEventListener("load", function() {
+        var mediaQuery = window.matchMedia("(max-width: 768px)");
+
+        function handleViewportChange(mediaQuery) {
+            if (mediaQuery.matches) {
+            // 在螢幕寬度小於等於 768px 時執行的程式碼
+            // 獲取輪播區域和按鈕元素
+            var slider = document.getElementById("slider-2");
+            var prevButton = document.getElementById("prev-m");
+            var nextButton = document.getElementById("next-m");
+
+            // 獲取所有輪播項目
+            var sliderItems = slider.getElementsByClassName("slider-item");
+            var currentIndex = 0; // 目前顯示的項目索引
+
+            // 上一張圖片按鈕的點擊事件處理函式
+            prevButton.addEventListener("click", function() {
+            changeSlide(currentIndex - 1);
+            });
+
+            // 下一張圖片按鈕的點擊事件處理函式
+            nextButton.addEventListener("click", function() {
+            changeSlide(currentIndex + 1);
+            });
+
+            // 定時切換圖片
+            setInterval(function() {
+            changeSlide(currentIndex + 1);
+            }, 4000); 
+
+            // 切換圖片函式
+            function changeSlide(index) {
+            // 隱藏目前顯示的項目
+            sliderItems[currentIndex].style.display = "none";
+
+            // 計算新的索引值
+            currentIndex = (index + sliderItems.length) % sliderItems.length;
+
+            // 顯示新的項目
+            sliderItems[currentIndex].style.display = "block";
+                clearInterval();
+            }
+            } else {
+            // 在螢幕寬度大於 768px 時執行的程式碼
+            // 這裡可以禁用輪播功能
+            $id("prev-m").onclick = null;
+            $id("next-m").onclick = null;
+            }
+        }
+
+        // 初始執行一次
+        handleViewportChange(mediaQuery);
+
+        // 監聽螢幕寬度的變化
+        mediaQuery.addListener(handleViewportChange);
+        });
+
+    </script>
+     <script>
+        // JavaScript程式碼，用於控制回到頂部按鈕的行為
+        document.querySelector('.top-button a').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

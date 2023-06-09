@@ -43,6 +43,7 @@ header{
     padding: 30px 15px 30px 0 ;
     gap: 40px;
     width: 100%;
+    height: 100vh;
     background-color: #fffdec;
     position: absolute;
     top:100%;
@@ -126,9 +127,103 @@ header{
     rotate: -45deg;
     transition: top .5s, rotate .5s;
 }
+/* ============login選單============== */
+#login{
+    display: none;
+}
+#login:checked + .main-nav .nav-item ul{
+    display: block;
+}
+#login:checked + .main-nav .nav-item:nth-child(1) .deco-line{
+    display: none;
+} 
+.nav-item label{
+    color: #0e0e3b;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: sans-serif;
+    display: inline-block;
+}
+.nav-item label:hover{
+    cursor: pointer;
+}
+.nav-item:hover .deco-line{
+    width: 100%;
+}
+.nav-item label i{
+    position: absolute;
+    top: 20px;
+}
+.nav-item ul{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#f7f3dd;
+    z-index: 10;
+    box-shadow: 0 5px 5px 1px #3e3c3c63;
+    display: none;
+    transition: .5s;
+}
+.nav-item ul li{
+    padding: 20px 0;
+}
+.nav-item ul li:hover{
+    background-color:#f6f4eb;
+    cursor: pointer;
+}
 /* 平板 */
 /* 桌機 */
  @media screen and (min-width:1024px){ 
+    /* =====login選單===== */
+    .nav-item ul li:hover a{
+        color:#000;
+    }
+    .nav-item label{
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        transition: 0.3s;
+        font-family: sans-serif;
+        display: inline-block;
+    }
+    .nav-item label i{
+        position: absolute;
+        top: 3px;
+        font-size: 14px;
+    }
+    .nav-item ul{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 80%;
+        text-align: center;
+        background-color:#DDBC8B;
+        z-index: 10;
+        box-shadow: 0 5px 5px 1px #3e3c3c63;
+        display: none;
+    }
+    .nav-item ul li{
+        padding: 20px 0;
+    }
+    .nav-item:not(:first-child):hover i{
+        color: #ffffffa0;
+    }
+    .nav-item:not(:first-child):hover a{
+        color: #ffffffa0;
+    } 
+    .nav-item:nth-child(1):hover i:not([ul]){
+        color: #ffffffa0;
+    }
+    .nav-item span:hover{
+        color: #ffffffa0;
+    }
+    .nav-item ul a:hover{
+        color: #ffffffa0;
+    }
+    /* =====login選單===== */
     .hb{
         display: none;
     }
@@ -160,6 +255,7 @@ header{
         flex-direction: row;
         justify-content: center;
         gap: 0;
+        height: 1vh;
         background-color: #DDBC8B;
     }
     .header-navlist .nav-item{
@@ -216,7 +312,7 @@ main{
     width: 100%;
 }
 .pets-photo{
-    width: 320px;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -237,24 +333,26 @@ main{
 }
 .img-small{
     display: flex;
+    justify-content: center;
     gap: 16px;
 }
 .img-small img{
-    width: 96px;
-    height: 96px;
+    width: 30%;
     box-sizing: border-box;
 }
 .img-small img:hover{
     cursor: pointer;
 }
 .content{
+    width: 100%;
     padding-top: 50px;
-    width: 1100px;
     margin:30px auto 0;
 }
 .content .breadcrumb{
     font-weight: bold;
-    margin-left: 30px;
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 30px;
 }
 .content .breadcrumb ul li{
     display: inline-block;
@@ -273,23 +371,24 @@ main{
 }
 .adoption-information{
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-evenly;
     align-items: start;
     font-weight: bold;
+    gap: 50px;
 }
 hgroup h1{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 22px;
 }
 hgroup{
     display: flex;
     align-items: center;
-    justify-content: start;
-    margin:40px 0 30px 58px;
+    justify-content: center;
     font-weight: bold;
+    margin: 30px 0;
 }
 hgroup span{
-    margin-left: 10px;
     font-size: 14px;
     color: #6d6767;
     line-height: 20px;
@@ -419,14 +518,14 @@ hgroup .icon i:nth-child(2):hover::after{
     margin-right: 5px;
 }
 .back-story{
-    width: 460px;
-    margin:80px 100px 0 auto;
+    max-width: 85%;
+    margin:50px auto;
     line-height: 24px;
     font-weight: bold;
 }
 .other-adoption{
-    width: 900px;
-    margin:80px auto 50px;
+    width: 100%;
+    margin:120px auto 50px;
 }
 .other-adoption h2{
     font-weight: bold;
@@ -441,7 +540,9 @@ hgroup .icon i:nth-child(2):hover::after{
 }
 .other-adoption-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     position: relative;
     z-index: 3;
     overflow: hidden;
@@ -454,7 +555,7 @@ hgroup .icon i:nth-child(2):hover::after{
     position: relative;
     z-index: 3;
     left: 50px;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
 }
 .other-adoption h2{
     position: relative;
@@ -470,21 +571,6 @@ hgroup .icon i:nth-child(2):hover::after{
     top: -40px;
     left: -110px;
     z-index: 0;
-}
-.other-adoption .text{
-    font-weight: bold;
-    width: 250px;
-    height: 250px;
-    line-height: 250px;
-    text-align: center;
-    background-color: #ddbc8b90;
-    position: absolute;
-    transform: translateY(250px);
-    color: #fff;
-    transition: .8s;
-}
-.other-adoption .item:hover .text{
-    transform: translateY(-250px);
 }
 .other-adoption .item:hover{
     cursor: pointer;
@@ -503,7 +589,12 @@ hgroup .icon i:nth-child(2):hover::after{
 .back a:hover{
     color: #DDBC8B;
 }
-
+@media screen and (min-width:1024px){
+    .back-story{
+        max-width: 50%;
+        margin:100px 80px 0 auto;
+    }
+}
 
 
 
@@ -511,10 +602,13 @@ hgroup .icon i:nth-child(2):hover::after{
 /* -----footer----- */
 footer{
     width: 100%;
+    box-sizing: border-box;
     background-color: #DDBC8B;
     border-radius: 20px 20px 0 0;
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    margin-top:-18px ;
+    padding: 12px;
 }
 footer .logo img{
     width: 180px;
@@ -522,12 +616,13 @@ footer .logo img{
 .footer-top{
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .footer-top .icon{
     display: flex;
     flex-direction: column;
     color: #fff;
-    margin: 45px 30px 0;
     gap: 15px;
 }
 .footer-top .icon i{
@@ -537,9 +632,8 @@ footer .logo img{
     cursor: pointer;
 }
 .footer-top ul{
-    margin: 45px 50px 0;
     color: #fff;
-    font-size: 14px;
+    font-size: 10px;
     font-family: sans-serif;
 }
 .footer-top li{
@@ -553,8 +647,8 @@ footer .logo img{
 footer p{
     text-align: center;
     color: #fff;
-    padding: 0 0 8px;
-    font-size: 14px;
+    padding: 8px;
+    font-size: 10px;
 }
 /* -----footer----- */
 .top-button{
