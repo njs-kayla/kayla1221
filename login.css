@@ -6,6 +6,7 @@
     position: relative;
     z-index: 1;
     background-color: #fff;
+    overflow: clip;
 }
 .content{
     font-family: sans-serif;
@@ -21,6 +22,8 @@
     font-size: 14px;
     padding: 20px;
     box-shadow: 0 0 5px 1px #6d67677e;
+    position: relative;
+    z-index: 2;
 }
 .content h1{
     font-size: 24px;
@@ -123,6 +126,32 @@
 .other button i{
     margin-right:5px ;
 }
+.yellow-deco,
+.green-deco,
+.pink-deco{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    border-radius: 50%;
+    opacity: .3;
+    transform: rotate(-72deg);
+    background: fixed;
+ }
+ .green-deco{
+    background-color: #9BD2BE;
+    top: -400px;
+    left: -210px;
+ }
+ .yellow-deco{
+    background-color: #E3D982;
+    top: 100px;
+    right: -380px;
+ }
+ .pink-deco{
+    background-color: #FFC7C2;
+    bottom: -300px;
+    left: -350px;
+ }
 @media screen and (min-width:414px){
     .content{
         width: 365px;
@@ -135,10 +164,6 @@
     }
 }
 @media screen and (min-width:1024px){
-    .wrap{
-        background-image: url(/pic/login/bg.png);
-        background-position: center;
-    }
     .content{
         width: 630px;
         box-sizing: border-box;
@@ -166,15 +191,18 @@
     .other button{
         font-size: 14px;
     }
-    .footer-top{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .footer-top ul{
-        margin-left: 50px;
-    }
-    footer{
-        margin-top: -50px;
-    }
+    .green-deco{
+        top: -200px;
+        left: -210px;
+     }
+     .yellow-deco{
+        background-color: #E3D982;
+        top: 100px;
+        right: -380px;
+     }
+     .pink-deco{
+        background-color: #FFC7C2;
+        bottom: -300px;
+        left: -300px;
+     }
 }
