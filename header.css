@@ -1,27 +1,19 @@
-.main-header{
+header{
     width: 100%;
+    height: 100%;
     background-color: #DDBC8B;
     z-index: 10;
-    position: sticky;
-    top: 0;
-}
-.logo-area{
-    background-color: #DDBC8B;
     padding: 10px 0;
-    position: relative;
-    z-index: 5;
+    position: sticky;
+    top: 0px;
 }
 .logo-area .logo{
-    width:120px;
-    height: 75px;
-    overflow: hidden;
+    width:110px;
     display: block;
     margin: auto;
 }
 .logo-area .logo img{
-    width: 100px;
-    object-fit: cover;
-    object-position: center -10px;
+    width: 100%;
 }
 #menu-switch{
     display: none;
@@ -129,8 +121,9 @@
 /* =========hb========== */
 .hb{
     position: absolute;
-    top: 30px;
-    right: 10px;
+    transform: translate(-50%,-50%);
+    right: 0;
+    top: 50%;
     width: 40px;
     height: 40px;
     z-index: 10;
@@ -263,18 +256,6 @@
     .logo-area{
         background-color: #DDBC8B;
         padding: 15px 0;
-    }
-    .logo-area .logo{
-        width:120px;
-        height: 75px;
-        overflow: hidden;
-        display: block;
-        margin: auto;
-    }
-    .logo-area .logo img{
-        width: 120px;
-        object-fit: cover;
-        object-position: center -10px;
     }
     .header-navlist{
         display: flex;

@@ -142,6 +142,23 @@ select{
 .content ul li:nth-child(8){
     margin-top: 40px;
 }
+#regiser{
+    width: 150px;
+    height: 40px;
+    background-color: #DDBC8B;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#regiser:hover{
+    cursor: pointer;
+}
+.check{
+    line-height: 20px;
+}
 .yellow-deco,
 .green-deco,
 .pink-deco{

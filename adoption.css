@@ -35,6 +35,9 @@ main{
     width: 150px;
     flex-shrink:0 ;
 }
+.banner h2{
+    line-height: 20px;
+}
 .banner  img{
     max-width: 300px;
 }

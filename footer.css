@@ -5,8 +5,8 @@ footer{
     background-color: #DDBC8B;
     border-radius: 20px 20px 0 0;
     position: relative;
-    z-index: 3;
-    margin-top:-18px ;
+    z-index: 5;
+    margin-top:0;
     padding: 12px;
 }
 footer .logo img{

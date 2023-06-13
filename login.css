@@ -168,9 +168,10 @@
     .content{
         width: 630px;
         box-sizing: border-box;
-        padding: 80px 80px 10px 80px;
+        padding: 60px 80px 10px 80px;
         margin:100px auto;
         font-size: 16px;
+        gap: 20px;
     }
     .content h1{
         font-size: 30px;
@@ -183,11 +184,15 @@
     #login{
         width: 200px;
     }
-    .other::before{
-        content: "--------------------------------------------------------";
-    }
     .function button{
         font-size: 14px;
+    }
+    .function{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        gap: 30px;
+        justify-content: center;
     }
     .other button{
         font-size: 14px;
