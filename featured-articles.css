@@ -330,7 +330,7 @@ main{
     align-items: center;
     gap: 15px;
     font-family: arial;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .paging li:hover{
     cursor: pointer;

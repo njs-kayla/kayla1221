@@ -68,13 +68,18 @@
 }
 .function{
     display: flex;
-    gap:40px;
+    width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
 }
 .function button{
     border: none;
     background-color:#DDBC8B;
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
     border-radius: 5px;
     color: #fff;
     font-weight: bold;
@@ -96,12 +101,8 @@
     display: flex;
     gap: 10px;
     position: relative;
-}
-.other::before{
-    content: "--------------------------------------------------------";
-    position: absolute;
-    color: #d2d2d2;
-    top: -22px;
+    border-top: 1px solid #b4b0b0c9;
+    padding-top: 15px;
 }
 .other button{
     border: none;
