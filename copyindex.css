@@ -1,0 +1,179 @@
+.user-card{
+    width: 450px;
+    height: 100%;
+    margin-left: 110px;
+    position: sticky;
+    top: 140px;
+}
+.information .name{
+    text-align: center;
+    margin-right: 160px ;
+    font-size: 16px;
+}
+.profile-photo img{
+    display: block;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: -135px;
+    left: 48px;
+    box-shadow: 1px 1px 1px 1px #00000051;
+}
+.profile-photo img:hover{
+    cursor: pointer;
+}
+.profile-photo{
+    position: relative;
+}
+.profile-photo-deco{
+    position: absolute;
+    background-color: #FFC38D;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border:2px solid #f5f5f5;
+    box-sizing: border-box;
+    top: 30px;
+    left: 208px;
+
+}
+.user-card .information{
+    font-family: Arial, sans-serif;
+    margin: 100px 0 0 10px;
+}
+.user-card .data{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 35px 0 25px 0;
+}
+.user-card .data .followers,
+.user-card .data .following,
+.user-card .data .likes{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 12px;
+    align-items: center;
+    font-size: 14px;
+}
+.user-card .data .likes{
+    padding-right: 180px;
+}
+.user-introduce{
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 270px;
+    padding-top: 25px;
+    font-size: 15px;
+    line-height: 26px;
+    border-top: 1px solid #adadada6;
+}
+.user-card .share-icon{
+    margin:30px 0 0 10px ;
+}
+.user-card .share-icon i{
+    margin-left: 33px;
+    display: inline-block;
+    font-size: 22px;
+}
+.user-card .share-icon i:hover{
+    color: #DDBC8B;
+}
+.information .follow-button{
+    background-color: #DDBC8B;
+    color: #fff;
+    width: fit-content;
+    box-sizing: border-box;
+    padding:15px 20px;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: .1em;
+    border-radius: 20px;
+    position: relative;
+    top: 25px;
+    left: 82px;
+    transition: .5s;
+}
+.information .follow-button:hover{
+    rotate: -5deg;
+}
+.user-card .share-icon i:hover{
+    cursor: pointer;
+}
+.user-content{
+    position: relative;
+}
+.user-content .menu{
+    display: flex;
+    gap: 80px;
+    margin: 60px 0 50px 20px;
+    font-family: Arial,sans-serif;
+    letter-spacing: 0.2em;
+
+}
+.user-content a{
+    text-decoration: none;
+    color: #000;
+}
+.user-content a:hover{
+    color: #877f7f;
+    cursor: pointer;
+}
+.follow-button:hover{
+    cursor: pointer;
+}
+.user-content .photo-area img{
+    width: 196px;
+    height: 205px;
+    transform: scale(1);
+    transition: .5s;
+}
+.user-content .photo-area img:hover{
+    cursor: pointer;
+}
+.user-content .photo-area .pic{
+    overflow: hidden;
+}
+.user-content .photo-area img:hover{
+    transform: scale(1.1);
+}
+.user-content .photo-area{
+    display: grid;
+    grid-template:repeat(2,1fr) /repeat(3,1fr);
+    gap: 5px;
+}
+.user-content .more{
+    display: inline-block;
+    font-family: Arial;
+    margin: 10px 0 10px 545px;
+}
+.user-content .more:hover{
+    cursor: pointer;
+    color: #877f7f;
+}
+.post-area{
+    padding-top: 80px ;
+}
+.post-area .item{
+    margin-bottom: 30px;
+    padding-bottom: 15px ;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid #6d6767;
+    width: fit-content;
+    transition: .3s;
+}
+.post-area .item:hover{
+    color: #DDBC8B;
+    cursor: pointer;
+}
+.post-area h1{
+    font-family: Arial;
+    letter-spacing: .1em;
+    font-size: 26px;
+    margin: 0 5px 40px;
+    font-weight: bold;
+}

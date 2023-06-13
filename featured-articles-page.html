@@ -6,21 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="bookmark" href="img/favicon.ico" />
-    <title>精選文章|PetsQ</title>
+    <title>精選文章-PetsQ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700" rel="stylesheet">
     <link rel="stylesheet" href="featured-articles-page.css">
+    <link rel="stylesheet" href="header.css">
 </head>
-<body>
-    <header>
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="PetsQ-logo">
-        </a>
+<body id="top">
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
+        <div class="logo-area">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="PetsQ-logo">
+            </a>
+        </div>
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="login">
         <nav class="main-nav">
             <div class="header-navlist">
+                <div class="nav-item">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <label for="login"><span>我的主頁</span><i class="fa-solid fa-angle-down"></i></label>
+                    
+                    <div class="deco-line"></div>
+                    <ul>
+                        <li><a href="user-profile.html">我的主頁</a></li>
+                        <li><a href="login.html">登入</a></li>
+                        <li><a href="register.html">註冊</a></li>
+                    </ul>
+                </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-image"></i>
                     <a href="#">毛孩相冊</a>
@@ -38,12 +59,7 @@
                 </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-dog"></i>
-                    <a href="adoption.html">領養專區</a>
-                    <div class="deco-line"></div>
-                </div>
-                <div class="nav-item">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <a href="user-profile.html">我的主頁</a>
+                    <a href="#">領養專區</a>
                     <div class="deco-line"></div>
                 </div>
             </div>
@@ -62,9 +78,6 @@
                     <h1>毛孩口臭不單純！陳博駿醫師教你正確犬貓口腔清潔</h1>
                 </div>
                 <div class="introduction">
-                    <button class="follow-btn">
-                        <a href="#">FOLLOW</a>
-                    </button>
                     <div class="profile">
                         <div class="writer">
                             <img src="pic/featured-articles-page/1685068795.jpg" alt="作者照片">
@@ -74,6 +87,7 @@
                         <span>專長：小動物內外科、小動物腫瘤科、重症加護、雷射治療、關節PRF再生醫學治療</span>
                     </div>
                     <div class="date">2023.05.26</div>
+                    <a href="#" class="follow-btn">FOLLOW</a>
                 </div>
                 <div class="large-picture">
                     <img src="pic/featured-articles-page/1685067695.jpg" alt="毛孩口臭不單純！陳博駿醫師教你正確犬貓口腔清潔">
@@ -90,25 +104,27 @@
                 <div class="banner-decoration-circle"></div>
             </div>
         </section>
-        <section class="content">
-            <div class="side-bar">
-                <h3>文章分類<span>CATEGORIES</span></h3>
-                <ul class="artitle-sort">
-                    <li><a href="#">獸醫專欄</a></li>
-                    <li><a href="#">醫療分享</a></li>
-                    <li><a href="#">日常照顧</a></li>
-                    <li><a href="#">生活趣事</a></li>
-                    <li><a href="#">動物議題討論</a></li>
-                    <li><a href="#">動物行為</a></li>
-                </ul>
-                <h3>分享出去<span>SHARE</span></h3>
-                <div class="share">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-line"></i>
-                </div>
+        <input type="checkbox" id="side-bar-switch">
+        <div class="side-bar">
+            <label class="sidebar-toggle" for="side-bar-switch"><i class="fa-solid fa-angle-right"></i></label>
+            <h3>文章分類<span>CATEGORIES</span></h3>
+            <ul class="artitle-sort">
+                <li><a href="#">獸醫專欄</a></li>
+                <li><a href="#">醫療分享</a></li>
+                <li><a href="#">日常照顧</a></li>
+                <li><a href="#">生活趣事</a></li>
+                <li><a href="#">動物議題討論</a></li>
+                <li><a href="#">動物行為</a></li>
+            </ul>
+            <h3>分享出去<span>SHARE</span></h3>
+            <div class="share">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-line"></i>
             </div>
+        </div>
+        <section class="content">
             <article>
                 <p>
                     很多飼主誤會「毛孩有口臭是正常的」，但其實不是！
@@ -230,5 +246,12 @@
         </div>
         <p>Copyright  All rights reserved.本網站為緯育TibaMe學員專題作品，本平台僅供學習、展示之用。 若有侵權疑慮，您可私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理。</p>
     </footer>
+    <script>
+        // JavaScript程式碼，用於控制回到頂部按鈕的行為
+        document.querySelector('.top-button a').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

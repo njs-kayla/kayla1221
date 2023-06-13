@@ -198,5 +198,12 @@
         }
         window.addEventListener("load", init, false);
     </script>
+     <script>
+        // JavaScript程式碼，用於控制回到頂部按鈕的行為
+        document.querySelector('.top-button a').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

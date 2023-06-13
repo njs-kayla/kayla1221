@@ -13,17 +13,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="adoption.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
     <input type="checkbox" name="" id="menu-switch">
-    <header id="top" class="main-header">
+    <header class="main-header">
+        <div class="logo-area" id="top">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="PetsQ-logo">
+            </a>
+        </div>
         <label for="menu-switch" class="hb">
             <span></span>
             <span></span>
             <span></span>
         </label>
+        <input type="checkbox" id="login">
         <nav class="main-nav">
             <div class="header-navlist">
+                <div class="nav-item">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <label for="login"><span>我的主頁</span><i class="fa-solid fa-angle-down"></i></label>
+                    
+                    <div class="deco-line"></div>
+                    <ul>
+                        <li><a href="user-profile.html">我的主頁</a></li>
+                        <li><a href="login.html">登入</a></li>
+                        <li><a href="register.html">註冊</a></li>
+                    </ul>
+                </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-image"></i>
                     <a href="#">毛孩相冊</a>
@@ -41,12 +59,7 @@
                 </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-dog"></i>
-                    <a href="adoption.html">領養專區</a>
-                    <div class="deco-line"></div>
-                </div>
-                <div class="nav-item">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <a href="user-profile.html">我的主頁</a>
+                    <a href="#">領養專區</a>
                     <div class="deco-line"></div>
                 </div>
             </div>
@@ -65,31 +78,31 @@
                 <h2>在這裡，遇見無數期待被愛的毛絨寶貝</h2>
             </div>
             <div class="pic">
-                <img src="pic/adoption/milk-tea-h7Dw2hF4e0A-unsplash-removebg-preview.png">
+                <img src="pic/adoption/zane-lee-VvTVkc_p-eg-unsplash-removebg-preview.png">
             </div>
         </section>
         <div class="search-area">
             <ul>
                 <li>
                     <a href="#" id="button">狗狗</a>
-                    <div class="triangle" id="triangle"></div>
+                    <div class="triangle"><i class="fa-solid fa-caret-up"></i></div>
                 
                 </li>
                 <li>
                     <a href="#" id="button">貓咪</a>
-                    <div class="triangle" id="triangle"></div>
+                    <div class="triangle"><i class="fa-solid fa-caret-up"></i></div>
                 </li>
                 <li>
-                    <a href="#" id="button">小動物(倉鼠、天竺鼠、兔子)</a>
-                    <div class="triangle" id="triangle"></div>
+                    <a href="#" id="button">小動物</a>
+                    <div class="triangle"><i class="fa-solid fa-caret-up"></i></div>
                 </li>
                 <li>
                     <a href="#" id="button">兩棲爬蟲</a>
-                    <div class="triangle" id="triangle"></div>
+                    <div class="triangle"><i class="fa-solid fa-caret-up"></i></div>
                 </li>
                 <li>
                     <a href="#" id="button">其他特寵</a>
-                    <div class="triangle" id="triangle"></div>
+                    <div class="triangle"><i class="fa-solid fa-caret-up"></i></div>
                 </li>
             </ul>
             <div class="search-bar-area">
@@ -104,198 +117,176 @@
             <div class="pink-deco"></div>
             <div class="green-deco-bottom"></div>
             <div class="card-list">
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/IMG_5663 2.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>台北市中正區</span>
-                        </div>
-                        <div class="text">
-                            <h2>萌萌大眼賓士貓，歡迎你成為他的家人</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/24</div>    
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/IMG_5663 2.png">
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/adopt_230505232527904613329_7728700327 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>新北市板橋區</span>
-                        </div>
-                        <div class="text">
-                            <h2>中型幼犬待領養，性格友善親人</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/24</div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>台北市中正區</span>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/adopt_230424164116211413249_1434125676 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>桃園市中壢區</span>
-                        </div>
-                        <div class="text">
-                            <h2>老年狐狸犬，尋找有愛心的家庭</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/24</div>   
+                    <div class="text">
+                        <h2>萌萌大眼賓士貓，歡迎你成為他的家人</h2>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/adopt_230505235337729113333_3606302017 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>台中市西區</span>
-                        </div>
-                        <div class="text">
-                            <h2>小米克斯待領養，活潑可愛又聰明</h2>  
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/23</div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/24</div>    
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/adopt_230505232527904613329_7728700327 1.png">
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/krakenimages-MgrEuJOtayk-unsplash 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>台南市北區</span>
-                        </div>
-                        <div class="text">
-                            <h2>可愛虎斑貓，希望給他一個溫暖的家</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/22</div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>新北市板橋區</span>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/1683445092114 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>高雄市鹽埕區</span>
-                        </div>
-                        <div class="text">
-                            <h2>白底虎斑貓，健康已結紮，尋找負責任的主人</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/22</div>
+                    <div class="text">
+                        <h2>中型幼犬待領養，性格友善親人</h2>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/laura-chica-fT1IJ04JwvU-unsplash 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>基隆市中正區</span>
-                        </div>
-                        <div class="text">
-                            <h2>聰明親人小黃，尋找一輩子的家人</h2>   
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/20</div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/24</div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/adopt_230424164116211413249_1434125676 1.png">
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/corey-oconnell-me4JXB-4gVQ-unsplash 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>新竹市東區</span>
-                        </div>
-                        <div class="text">
-                            <h>台中可愛兔子開放領養中</h>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/20</div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>桃園市中壢區</span>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/bluebird-images-KfXEW2okqiY-unsplash 1.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>嘉義市西區</span>
-                        </div>
-                        <div class="text">
-                            <h2>可愛搞笑的巴哥犬等待新家</h2>                           
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/19</div>
+                    <div class="text">
+                        <h2>老年狐狸犬，尋找有愛心的家庭</h2>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/unsplash_HcCcfdYjGfI.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>新北市新店區</span>
-                        </div>
-                        <div class="text">
-                            <h2>4個月母貓送養，親人又愛玩，已經驅蟲接種。</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/19</div>    
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/24</div>   
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/adopt_230505235337729113333_3606302017 1.png">
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/unsplash_TjBp4J5b6jA.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>台南市安南區</span>
-                        </div>
-                        <div class="text">
-                            <h2>5歲公狗送養，守護性強，適合有經驗的狗主人。</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/19</div>    
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>台中市西區</span>
                     </div>
-                </a>
-                <a href="adoption-page.html">
-                    <div class="card">
-                        <div class="pic">
-                            <img src="pic/adoption/unsplash_U-MpLZElOqE.png">
-                        </div>
-                        <div class="location-tag">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>高雄市鼓山區</span>
-                        </div>
-                        <div class="text">
-                            <h2>2歲母貓送養，溫柔親人，已絕育且完成疫苗接種</h2>
-                        </div>
-                        <a href="#" class="vm-btn" >View More</a>
-                        <div class="date">05/19</div>    
+                    <div class="text">
+                        <h2>小米克斯待領養，活潑可愛又聰明</h2>  
                     </div>
-                </a>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/23</div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/krakenimages-MgrEuJOtayk-unsplash 1.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>台南市北區</span>
+                    </div>
+                    <div class="text">
+                        <h2>可愛虎斑貓，希望給他一個溫暖的家</h2>
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/22</div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/1683445092114 1.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>高雄市鹽埕區</span>
+                    </div>
+                    <div class="text">
+                        <h2>白底虎斑貓，健康已結紮，尋找負責任的主人</h2>
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/22</div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/laura-chica-fT1IJ04JwvU-unsplash 1.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>基隆市中正區</span>
+                    </div>
+                    <div class="text">
+                        <h2>聰明親人小黃，尋找一輩子的家人</h2>   
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/20</div>
+                </div>
+            
+            
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/corey-oconnell-me4JXB-4gVQ-unsplash 1.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>新竹市東區</span>
+                    </div>
+                    <div class="text">
+                        <h>台中可愛兔子開放領養中</h>
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/20</div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/bluebird-images-KfXEW2okqiY-unsplash 1.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>嘉義市西區</span>
+                    </div>
+                    <div class="text">
+                        <h2>可愛搞笑的巴哥犬等待新家</h2>                           
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/19</div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/unsplash_HcCcfdYjGfI.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>新北市新店區</span>
+                    </div>
+                    <div class="text">
+                        <h2>4個月母貓送養，親人又愛玩，已經驅蟲接種。</h2>
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/19</div>    
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/unsplash_TjBp4J5b6jA.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>台南市安南區</span>
+                    </div>
+                    <div class="text">
+                        <h2>5歲公狗送養，守護性強，適合有經驗的狗主人。</h2>
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/19</div>    
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="pic/adoption/unsplash_U-MpLZElOqE.png">
+                    </div>
+                    <div class="location-tag">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>高雄市鼓山區</span>
+                    </div>
+                    <div class="text">
+                        <h2>2歲母貓送養，溫柔親人，已絕育且完成疫苗接種</h2>
+                    </div>
+                    <a href="adoption-page.html" class="vm-btn" >View More</a>
+                    <div class="date">05/19</div>    
+                </div>
             </div>
         </section>
     </main>

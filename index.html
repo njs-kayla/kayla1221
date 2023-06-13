@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">  
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>  
 
 
 </head>
@@ -58,7 +59,7 @@
             <div class="header-navlist">
                 <div class="nav-item">
                     <i class="fa-solid fa-circle-user"></i>
-                    <label for="login"><span>我的主頁</span>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></label>
+                    <label for="login"><span>我的主頁</span><i class="fa-solid fa-angle-down"></i></label>
                     
                     <div class="deco-line"></div>
                     <ul>
@@ -84,7 +85,7 @@
                 </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-dog"></i>
-                    <a href="#">領養專區</a>
+                    <a href="adoption.html">領養專區</a>
                     <div class="deco-line"></div>
                 </div>
             </div>
@@ -92,49 +93,36 @@
     </header>
     <main>
         <div class="wrap-banner">
-            <div class="nav-icon">
-                   
-                <button id="prev">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button id="next">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+            <div class="btn-swiper">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div id="slider">
-                <div class="slider-item">
-                    <a href="#">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="pic"><img src="pic/index/banner-2.png"></div>
-                    </a>
-                </div>
-                <a href="#">
-                    <div class="slider-item">
+                    </div>
+                    <div class="swiper-slide">                 
                         <div class="pic"><img src="pic/index/banner-1.png"></div>
                     </div>
-                </a>
-                <div class="slider-item">
-                    <a href="#">
+                    <div class="swiper-slide">
                         <div class="pic"><img src="pic/index/banner-center.png"></div>
-                    </a>
-                    <div class="tag-hot">
-                        <span class="text">HOT</span>
-                        <span class="triangle"></span>
+                        <div class="tag-hot">
+                            <span class="text">HOT</span>
+                            <span class="triangle"></span>
+                        </div>
+                        <div class="tag-title">
+                            <span class="text">自己跟回家的貓貓~</span>
+                            <span class="triangle"></span>
+                        </div>
                     </div>
-                    <div class="tag-title">
-                        <span class="text">自己跟回家的貓貓~</span>
-                        <span class="triangle"></span>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="slider-item">
+                    <div class="swiper-slide">
                         <div class="pic"><img src="pic/index/banner4.png"></div>
                     </div>
-                </a>
-                <a href="#">
-                    <div class="slider-item">
+                    <div class="swiper-slide">
                         <div class="pic"><img src="pic/index/banner5.jpg"></div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <div class="wrap-slider">
@@ -313,8 +301,9 @@
     </footer>
     <script>
         $('.owl-carousel').owlCarousel({
+            center:true,
             loop:true,
-            margin:5,
+            margin:0,
             nav:false,
             dots:false,
             autoplay:true,
@@ -322,57 +311,22 @@
                 0:{
                     items:1
                 },
+                414:{
+                    items:2
+                },
                 768:{
                     items:3
+                },
+                1200:{
+                    items:4
                 },
                 1400:{
                     items:5
                 }
             }
         })
-    </script>
-    <script>//桌機板banner
-       function $id(navIcon) {
-        return document.getElementById(navIcon);
-        }
-
-        function prevButtonClick() {
-        let itemView = $id("slider");
-        let items = document.getElementsByClassName("slider-item");
-
-        let first = items[0];
-        let last = items[items.length - 1];
-
-        itemView.insertBefore(last, first);
-        }
-
-
-
-        function nextButtonClick() {
-        let itemView = $id("slider");
-        let items = document.getElementsByClassName("slider-item");
-
-        let first = items[0];
-        itemView.appendChild(first);
-        }
-
-        window.addEventListener("load", function() {
-        let prevButton = $id("prev");
-        let nextButton = $id("next");
-
-        prevButton.addEventListener("click", prevButtonClick);
-        nextButton.addEventListener("click", nextButtonClick);
-        });
-
-    </script>
+    </script> 
     <script>//手機板banner
-        window.addEventListener("load", function() {
-        var mediaQuery = window.matchMedia("(max-width: 768px)");
-
-        function handleViewportChange(mediaQuery) {
-            if (mediaQuery.matches) {
-            // 在螢幕寬度小於等於 768px 時執行的程式碼
-            // 獲取輪播區域和按鈕元素
             var slider = document.getElementById("slider-2");
             var prevButton = document.getElementById("prev-m");
             var nextButton = document.getElementById("next-m");
@@ -408,21 +362,6 @@
             sliderItems[currentIndex].style.display = "block";
                 clearInterval();
             }
-            } else {
-            // 在螢幕寬度大於 768px 時執行的程式碼
-            // 這裡可以禁用輪播功能
-            $id("prev-m").onclick = null;
-            $id("next-m").onclick = null;
-            }
-        }
-
-        // 初始執行一次
-        handleViewportChange(mediaQuery);
-
-        // 監聽螢幕寬度的變化
-        mediaQuery.addListener(handleViewportChange);
-        });
-
     </script>
      <script>
         // JavaScript程式碼，用於控制回到頂部按鈕的行為
@@ -430,6 +369,25 @@
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    </script>
+    <script>
+        var mySwiper = new Swiper ('.swiper', {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 40,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            direction: 'horizontal', 
+            loop: true,
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+            autoplay:true,
+            speed:400,
+        }) 
     </script>
 </body>
 </html>

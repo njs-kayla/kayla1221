@@ -13,13 +13,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="user-profile.css">
+    <link rel="stylesheet" href="header.css">
 
 
 </head>
 <body>
-    <header class="normal-header">
+    <input type="checkbox" name="" id="menu-switch">
+    <header class="main-header">
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="login">
         <nav class="main-nav">
             <div class="header-navlist">
+                <div class="nav-item">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <label for="login"><span>我的主頁</span><i class="fa-solid fa-angle-down"></i></label>
+                    
+                    <div class="deco-line"></div>
+                    <ul>
+                        <li><a href="user-profile.html">我的主頁</a></li>
+                        <li><a href="login.html">登入</a></li>
+                        <li><a href="register.html">註冊</a></li>
+                    </ul>
+                </div>
                 <div class="nav-item">
                     <i class="fa-solid fa-image"></i>
                     <a href="#">毛孩相冊</a>
@@ -38,11 +57,6 @@
                 <div class="nav-item">
                     <i class="fa-solid fa-dog"></i>
                     <a href="adoption.html">領養專區</a>
-                    <div class="deco-line"></div>
-                </div>
-                <div class="nav-item">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <a href="#">我的主頁</a>
                     <div class="deco-line"></div>
                 </div>
             </div>
@@ -78,19 +92,25 @@
                             <span class="number">8,693</span>
                         </div>
                     </div>
+                    
                     <div class="user-introduce">
-                        <p>嗨，大家好，我是一位貓咪飼主，偶爾也會兼當愛心中途。<br>家裡目前有一隻名為局長的米克斯大橘貓。希望能和大家交流有關貓咪的知識和心得。
-                        也歡迎領養現在待領養的貓咪喔~</p>
+                        
+                        <label for="more"><i class="fa-solid fa-plus"></i></label>
+                        <input type="checkbox" id="more">
+                        <div class="content">
+                            <p>嗨，大家好，我是一位貓咪飼主，偶爾也會兼當愛心中途。家裡目前有一隻名為局長的米克斯大橘貓。希望能和大家交流有關貓咪的知識和心得。也歡迎領養現在待領養的貓咪喔~</p>
+                            <div class="share-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-line"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="follow-button">
+                                <span>FOLLOW</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="share-icon">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-line"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="follow-button">
-                        <span>FOLLOW</span>
-                    </div>
+                    
                 </div>
             </div>
             <div class="user-content">

@@ -1,6 +1,5 @@
 body{
     font-family: sans-serif,Arial;
-    scroll-behavior: smooth;
     background-color:#f5f5f5 ;
 }
 main{
@@ -16,6 +15,8 @@ header{
 .logo-area{
     background-color: #DDBC8B;
     padding: 10px 0;
+    position: relative;
+    z-index: 8;
 }
 .logo-area .logo{
     width:120px;
@@ -33,7 +34,7 @@ header{
     display: none;
 }
 .main-nav{
-    transform:translateX(-100%);
+    transform: translateY(-1500px);
     transition: 1s;
 }
 .header-navlist{
@@ -44,19 +45,19 @@ header{
     gap: 40px;
     width: 100%;
     height: 100vh;
-    background-color: #fffdec;
+    background-color: #e7e6df;
     position: absolute;
     top:100%;
     right: 0;
     z-index: 10;
 }
 .header-navlist i{
-    color: #424255;
+    color: #0e0e3b;
     font-size: 20px;
     transition: 0.3s;
 }
 .header-navlist a{
-    color: #1d1d54;
+    color: #0e0e3b;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
@@ -90,9 +91,10 @@ header{
     right: 10px;
     width: 40px;
     height: 40px;
+    z-index: 10;
 }
 #menu-switch:checked + .main-header .main-nav{
-    transform:translateX(0);
+    transform:translateY(0);
 }
 .hb span{
     background-color: aliceblue;
@@ -158,10 +160,10 @@ header{
 .nav-item ul{
     position: absolute;
     top: 110%;
-    left: 0;
-    width: 100%;
+    left: -40%;
+    width: 200%;
     text-align: center;
-    background-color:#f7f3dd;
+    background-color:#f7f4e5;
     z-index: 10;
     box-shadow: 0 5px 5px 1px #3e3c3c63;
     display: none;
@@ -337,7 +339,7 @@ main{
     gap: 16px;
 }
 .img-small img{
-    width: 30%;
+    width: 31%;
     box-sizing: border-box;
 }
 .img-small img:hover{
@@ -346,7 +348,7 @@ main{
 .content{
     width: 100%;
     padding-top: 50px;
-    margin:30px auto 0;
+    margin:auto;
 }
 .content .breadcrumb{
     font-weight: bold;
@@ -392,9 +394,10 @@ hgroup span{
     font-size: 14px;
     color: #6d6767;
     line-height: 20px;
+    margin-left: 10px;
 }
 hgroup .icon i{
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 20px;
     color: #DDBC8B;
     position: relative;
@@ -535,7 +538,7 @@ hgroup .icon i:nth-child(2):hover::after{
     position: absolute;
     width: 150px;
     top: -70px;
-    left: -120px;
+    left: 0;
     z-index: 2;
 }
 .other-adoption-list{
@@ -554,8 +557,8 @@ hgroup .icon i:nth-child(2):hover::after{
 .other-adoption hgroup{
     position: relative;
     z-index: 3;
-    left: 50px;
-    margin-bottom: 60px;
+    left: 0;
+    margin: 60px auto;
 }
 .other-adoption h2{
     position: relative;
@@ -569,7 +572,7 @@ hgroup .icon i:nth-child(2):hover::after{
     border-radius: 50%;
     background-color: #fff;
     top: -40px;
-    left: -110px;
+    left: 20px;
     z-index: 0;
 }
 .other-adoption .item:hover{
@@ -578,7 +581,7 @@ hgroup .icon i:nth-child(2):hover::after{
 .back{
     width: fit-content;
     margin: auto;
-    padding: 30px 0;
+    padding: 30px 0 80px;
 
 }
 .back a{
@@ -589,10 +592,58 @@ hgroup .icon i:nth-child(2):hover::after{
 .back a:hover{
     color: #DDBC8B;
 }
+@media screen and (min-width:768px){
+    .content .breadcrumb{
+        font-weight: bold;
+        margin:0 0 50px 40px ;
+        width: fit-content;
+    }
+    .pets-photo{
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 10px;
+    }
+    hgroup h1{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    hgroup{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-weight: bold;
+        margin:30px 3%;
+    }
+    .other-adoption hgroup{
+        position: relative;
+        z-index: 3;
+        margin-left: 30px;
+    }
+    .other-adoption h2{
+        position: relative;
+        z-index: 4;
+        left: 150px;
+    }
+}
 @media screen and (min-width:1024px){
     .back-story{
         max-width: 50%;
         margin:100px 80px 0 auto;
+    }
+    .content .breadcrumb{
+        font-weight: bold;
+        margin:50px 0 50px 40px ;
+        width: fit-content;
+    }
+    .adoption-information{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: start;
+        font-weight: bold;
+        gap: 80px;
     }
 }
 
