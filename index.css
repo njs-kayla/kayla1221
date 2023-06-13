@@ -170,7 +170,7 @@ main{
     display: none;
 }
 .main-nav{
-    transform: translateY(-700px);
+    transform: translateY(-2000px);
     transition: 1s;
 }
 .header-navlist{
