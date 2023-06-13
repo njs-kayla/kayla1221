@@ -1,7 +1,9 @@
 /* ------normal-header----- */
 body{
     background-color: #f5f5f5;
-    overflow-x: hidden;
+}
+main{
+    overflow-x: clip;
 }
 .banner{
     margin: 80px 0 50px 0;
@@ -40,7 +42,7 @@ body{
     position: relative;
 }
 .banner h1{
-    font-size: 36px;
+    font-size: 24px;
     margin-bottom: 30px;
     position: relative;
     z-index: 2;
@@ -104,13 +106,18 @@ body{
 main{
     position: relative;
 }
+.content{
+    width: 100%;
+    overflow-x: hidden;
+    margin: -400px auto 20px;
+}
 .article-list{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
     width: fit-content;
-    margin: -400px auto 20px;
+    gap: 10px;
 }
 .article-list a{
     text-decoration: none;
@@ -129,6 +136,7 @@ main{
     gap: 15px;
     border-radius: 10px;
     transition: .3s;
+    background-color: #fff;
 }
 .article-list .item:nth-last-child(1),
 .article-list .item:nth-last-child(2),
@@ -395,6 +403,9 @@ main{
         align-items: center;
         justify-content: center;
     }
+    .article-list .item{
+        background-color: #00000000;
+    }
     }
 /* -----side-bar----- */
 /* -----footer----- */
@@ -468,13 +479,21 @@ footer p{
  }
  .yellow-deco{
     background-color: #E3D982;
-    bottom: -100px;
+    top: 800px;
     right: -380px;
  }
  .pink-deco{
     background-color: #FFC7C2;
-    top: 500px;
+    bottom: 500px;
     left: -250px;
+ }
+ @media screen and (min-width:1024px){
+    .pink-deco{
+        bottom: 0px;
+     }
+     .yellow-deco{
+        top: 500px;
+     }
  }
  .top-button{
     width: 50px;
