@@ -310,5 +310,12 @@
         </div>
         <p>Copyright  All rights reserved.本網站為緯育TibaMe學員專題作品，本平台僅供學習、展示之用。 若有侵權疑慮，您可私訊TibaMe-前端設計工程師養成班，後續會由專人協助處理。</p>
     </footer>
+    <script>
+        // JavaScript程式碼，用於控制回到頂部按鈕的行為
+        document.querySelector('.top-button a').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
