@@ -237,7 +237,7 @@
         display: flex;
         flex-wrap: wrap; 
         justify-content: center;
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
     .user-content .more{
