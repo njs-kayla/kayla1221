@@ -1107,65 +1107,6 @@ main{
         flex-wrap: nowrap;
     }
 }
-/* -----footer----- */
-footer{
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #DDBC8B;
-    border-radius: 20px 20px 0 0;
-    position: relative;
-    z-index: 3;
-    margin-top:-18px ;
-    padding: 12px;
-}
-footer .logo img{
-    max-width: 160px;
-}
-.footer-top{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 95%;
-    margin: auto;
-}
-.footer-top .icon{
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    gap: 15px;
-}
-.footer-top .icon i{
-    font-size: 20px;
-}
-.footer-top .icon i:hover{
-    cursor: pointer;
-}
-.footer-top ul{
-    color: #fff;
-    font-size: 10px;
-    font-family: sans-serif;
-    padding-top: 5px;
-}
-.footer-top li{
-    margin-bottom: 7px;
-    width: fit-content;
-}
-.footer-top li:hover{
-    cursor: pointer;
-    color: #6d6767;
-}
-footer p{
-    text-align: center;
-    color: #fff;
-    padding: 8px;
-    font-size: 10px;
-    width: 90%;
-    margin: auto;
-    line-height: 16px;
-    border-top: 1px solid #fff;
-}
-/* -----footer----- */
 /* -----background-deco----- */
 .deco-green,
 .deco-green-bottom,
