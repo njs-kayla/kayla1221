@@ -372,6 +372,9 @@ main{
         align-items: center;
         gap: 0px;
     }
+    .banner h1{
+        font-size: 30px;
+    }
     .banner .recommend-area{
         width: 60%;
     }
