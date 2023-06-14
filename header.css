@@ -308,11 +308,11 @@ header{
         height: 2px;
         background-color: #ffffffa0;
         position: absolute;
-        bottom: 6px;
+        bottom: 8px;
         left: 25%;
         transition: all .4s linear;
     }
     .nav-item:hover .deco-line{
-        width: 50%;
+        width: 52%;
     }
 } 
