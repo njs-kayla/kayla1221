@@ -16,7 +16,7 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     position: relative;
     
 }
@@ -236,6 +236,45 @@ main{
 .adoption-area .card:hover .vm-btn::after{
     transform: scale(1);
 }
+.paging ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: arial;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+.paging li:hover{
+    cursor: pointer;
+}
+.paging li:nth-child(1),
+.paging li:nth-child(2),
+.paging li:nth-child(8),
+.paging li:nth-child(9){
+    background-color: #DDBC8B;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+}
+.paging li:nth-child(3),
+.paging li:nth-child(4),
+.paging li:nth-child(5),
+.paging li:nth-child(6),
+.paging li:nth-child(7){
+    color: #847d7d;
+}
+.paging li:nth-child(4):hover,
+.paging li:nth-child(5):hover,
+.paging li:nth-child(6):hover,
+.paging li:nth-child(7):hover{
+    color: #383737;
+    scale: 1.05;
+}
 @media screen and (min-width:414px){
     .adoption-area .card-list{
         display: flex;
@@ -257,7 +296,7 @@ main{
     }
     .search-area ul{
         justify-content: center;
-        gap: 30px;
+        gap: 50px;
         font-size: 16px;
     }
 }
@@ -331,7 +370,7 @@ main{
  }
  .green-deco-bottom{
     background-color: #9BD2BE;
-    right: -100px;
+    right: -250px;
     bottom: -300px;
  }
  @media screen and (min-width:1024px){

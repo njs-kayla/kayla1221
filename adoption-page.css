@@ -412,7 +412,7 @@ hgroup .icon i:nth-child(2):hover::after{
     }
     .content .breadcrumb{
         font-weight: bold;
-        margin:50px 0 50px 50px ;
+        margin:50px 0 50px 60px ;
         width: fit-content;
     }
     .adoption-information{
@@ -422,6 +422,9 @@ hgroup .icon i:nth-child(2):hover::after{
         align-items: start;
         font-weight: bold;
         gap: 80px;
+    }
+    hgroup{
+        margin:30px 0 30px 60px;
     }
 }
 .top-button{
