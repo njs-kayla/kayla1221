@@ -223,8 +223,7 @@
         cursor: pointer;
     }
     .user-content .photo-area img{
-        max-width: 196px;
-        max-height: 205px;
+        width: 100%;
         transform: scale(1);
         transition: .5s;
     }
@@ -233,6 +232,8 @@
     }
     .user-content .photo-area .pic{
         overflow: hidden;
+        max-width: 196px;
+        max-height: 205px;
     }
     .user-content .photo-area img:hover{
         transform: scale(1.1);
