@@ -140,7 +140,7 @@
     .user-card .data{
         display: flex;
         justify-content: space-evenly;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .user-card .data .followers,
     .user-card .data .following,
