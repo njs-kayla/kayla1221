@@ -200,9 +200,9 @@ header{
     }
     .nav-item label i{
         position: absolute;
-        top: 50%;
+        top: 49%;
         transform: translate(-50%,-50%);
-        right: 15px;
+        right: 25px;
         font-size: 14px;
     }
     .nav-item ul{
