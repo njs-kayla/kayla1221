@@ -684,7 +684,6 @@ main{
         color: #fff;
         font-size: 22px;
         transition: 0.3s;
-        margin-right: 8px;
     }
 
     .nav-item .deco-line{
@@ -697,7 +696,7 @@ main{
         transition: all .4s linear;
     }
     .nav-item:hover .deco-line{
-        width: 50%;
+        width: 52%;
     }
     header .header-navlist{
         padding: 20px 0;
