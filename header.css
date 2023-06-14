@@ -243,7 +243,7 @@ header{
     }
     .main-header{
         position: sticky;
-        top: -105px;;
+        top: -92px;;
     }
     header .main-nav{
         display: flex;
@@ -255,7 +255,13 @@ header{
     
     .logo-area{
         background-color: #DDBC8B;
-        padding: 15px 0;
+        padding: 0 0;
+    }
+    .logo-area .logo{
+        width:120px;
+    }
+    .logo-area .logo img{
+        width: 100%;
     }
     .header-navlist{
         display: flex;

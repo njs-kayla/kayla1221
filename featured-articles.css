@@ -6,7 +6,8 @@ main{
     overflow: clip;
 }
 .banner{
-    margin: 80px 0 50px 0;
+    margin-bottom:50px;
+    padding-top:80px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
